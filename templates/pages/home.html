@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Citizen Network</title>
+	
+	<!--font google-->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+     <!--font awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	   <!--Normalize css-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+	<!--stylesheets-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<section class="banner">
+	<div class="wrapper">
+		<header class="banner__header clearfix" >
+			<nav class="banner__nav">
+				<a href="" class="brand">Diama</a>
+				<ul>
+					<li><a href="">Acceuil</a></li>
+					<li><a href="{% url 'contact'%}">Inscription</a></li>
+					<li><a href="">Connexion</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="banner__intro">
+			<h1>Reseau social citoyen</h1>
+			<p>
+				Grace à cette plateforme , vous avez la possibilité de tisser des liens d'amitié avec d'autres citoyens ,échanger des idées recevoir des experiences si vous rencontrer des problèmes sur l'un de vos projets et bien plus encore !
+			</p>
+			<a href="" class="button_highlight">Creer un compte</a>
+		</div>
+		<div class="banner__slider">
+			!!!SLIDER HERE!!!
+		</div>
+	</div>
+</section>
+<section class="signup clearfix">
+	<div class="wrapper">
+		<div class="left">
+			<h2>Plus de 10.000 entrepreneurs nous rejoint sur Diama</h2>
+		</div>
+		<div class="right">
+			<a href="" class="button_highlight">Creer votre compte</a>
+		</div>
+	</div>
+</section>
+<footer class="footer clearfix">
+	<div class="wrapper">
+		<div class="row clearfix">
+			<div class="footer__column">
+				<h3>Liens utils</h3>
+				<ul>
+					<li><a href="">Testimonial</a></li>
+					<li><a href="">Help Center</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Jobs</a></li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h3>Sell online</h3>
+				<ul>
+					<li><a href="">Testimonial</a></li>
+					<li><a href="">Help Center</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Jobs</a></li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h3>Suivez Nous</h3>
+				<ul>
+					<li><a href="">Testimonial</a></li>
+					<li><a href="">Help Center</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Jobs</a></li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h3>From the blog</h3>
+				<article>
+					<h1><a href="">Booster l'employabilité</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore provident rerum reiciendis pariatur, natus consequatur laudantium dolore unde, vitae harum facilis id sapiente! Nihil cum asperiores, ea ab repellendus.</p>
+					<a href="" class="read_more">Read more</a>
+				</article>
+			</div>
+		</div>
+		<div class="footer__secondary clearfix">
+			<ul>
+				<li>Diama &copy; 2016</li>
+				<li><a href="">English</a></li>
+				<li><a href="">Espagnol</a></li>
+				<li><a href="">Terms</a></li>
+				<li><a href="">About us</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
