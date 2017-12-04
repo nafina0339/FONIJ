@@ -1,11 +1,26 @@
 from django import forms
-class ContactForm(forms.Form):    
-	sujet = forms.CharField(max_length=100)    
-	message = forms.CharField(widget=forms.Textarea)   
-	envoyeur = forms.EmailField(label=u"Votre adresse mail")   
-	renvoi = forms.BooleanField(help_text=u"Cochez si vous souhaitez obtenir une copie du mail envoyé.", required=False)
-	def clean_message(self):   
-		message = self.cleaned_data['message']    
-		if "pizza" in message:        
-				raise forms.ValidationError("On ne veut pas entendre parler de pizza !")    
-		return message
+from .models import *
+from django.contrib.auth.models import User
+
+class userform(forms.ModelForm):
+	nom= forms.CharField(widget=forms.TextInput(
+		attrs={'class' :'form-control', 'placeholder':'Nom'}
+		), required=True, max_length=50)
+	prenom= forms.CharField(widget=forms.TextInput(
+		attrs={'class' :'form-control', 'placeholder':'Prénom'}
+		), required=True, max_length=50)
+	pseudo= forms.CharField(widget=forms.TextInput(
+		attrs={'class' :'form-control', 'placeholder':'Pseudo'}
+		), required=True, max_length=50)
+	email= forms.CharField(widget=forms.EmailInput(
+		attrs={'class' :'form-control', 'placeholder':'Adresse Email'}
+		), required=True, max_length=50)
+	password= forms.CharField(widget=forms.PasswordInput(
+		attrs={'class' :'form-control', 'placeholder':'Mot de passe'}
+		), required=True, max_length=50)
+	password1= forms.CharField(widget=forms.PasswordInput(
+		attrs={'class' :'form-control', 'placeholder':'Confirmation'}
+		), required=True, max_length=50)
+	class Meta():
+		model=User
+		fields = ['nom', 'prenom', 'pseudo', 'email', 'password']
