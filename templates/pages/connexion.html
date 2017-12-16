@@ -5,7 +5,21 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+
 <div class="container">
+	<div class="form-group">
+		{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li>
+					<div class="alert alert-success alert-dismissable">
+ 						{{ message }}
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
 	<div class="col-md-2"></div>
 	<div class="col-md-8" style="margin-top: 10%;">
 		<form action="" method="post" >

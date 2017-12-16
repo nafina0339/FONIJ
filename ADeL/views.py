@@ -18,7 +18,7 @@ def connexion(request):
 				auth.login(request,user)
 				return render(request, 'pages/welcome.html')
 			else:
-				messages.errors(request,'username ou password incorrect')
+				messages.error(request,'username ou password incorrect')
 		except auth.ObjectNotExist:
 			print("user invalid")
 
