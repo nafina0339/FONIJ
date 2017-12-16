@@ -88,6 +88,7 @@ body {
   .signup .left {
     float: left; }
     .signup .left h2 {
+ font-family: "Pacifico", Helvetica, sans-serif;
       font-size: 1.4em;
       color: #4f5b60;
       margin-top: -0.1em; }

@@ -6,12 +6,48 @@
 <body>
 <h1 style="text-align: center;">User Registration</h1>
 <div class="container">
+	<div class="form-group">
+		{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li>
+					<div class="alert alert-success alert-dismissable">
+ 						{{ message }}
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
 		<form action="" method="post">
 			{% csrf_token %}
-			{{ frm.as_p }}
-			<button class="btn btn-success">Register</button>
+			 <div class="form-group">
+   				 <label for="email">USERNAME:</label>
+    				{{ frm.username }}
+  			</div>
+  			 <div class="form-group">
+   				 <label for="email">EMAIL:</label>
+    				{{ frm.email }}
+  			</div>
+			 <div class="form-group">
+   				 <label for="email">PRENOM:</label>
+    				{{ frm.first_name }}
+  			</div>
+			 <div class="form-group">
+   				 <label for="email">NOM:</label>
+    				{{ frm.last_name }}
+  			</div>
+			 <div class="form-group">
+   				 <label for="email">MOT DE PASSE:</label>
+    				{{ frm.password }}
+  			</div>
+			 <div class="form-group">
+   				 <label for="email">CONFIRMATION:</label>
+    				{{ frm.confirm_password }}
+  			</div>
+			<input type="submit" class="btn btn-primary" value="Inscription" name="register">
 		</form>
 		
 	</div>
