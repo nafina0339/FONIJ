@@ -1,10 +1,15 @@
-<nav class="navbar">
+<section class="banner">
 	<div class="wrapper">
-		<a href="{% url 'home' %}" class="navbar-brand">Citizen Network</a>
-		<ul class="navbar-right">
-		<li><a href="{% url 'home' %}">Acceuil</a></li>
-		<li><a href="{% url 'connexion' %}">Connexion</a></li>
-		<li><a href="{% url 'register' %}">Inscription</a></li>
-	</ul>
+		<header class="banner__header clearfix" >
+			<nav class="banner__nav">
+				<a href="" class="brand">Fonij Network</a>
+				<ul>
+					<li><a href="{% url 'home' %}">Acceuil</a></li>
+					<li><a href="{% url 'register'%}">Inscription</a></li>
+					<li><a href="{% url 'connexion'%}">Connexion</a></li>
+					<li><a href="{% url 'base'%}">base</a></li>
+				</ul>
+			</nav>
+		</header>	
 	</div>
-</nav>
+</section>

@@ -3,12 +3,19 @@
 <html>
 <head>
 	<title>Action pour le Developpement Local</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css  '%}">
+	<!--font google-->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+     <!--font awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	   <!--Normalize css-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+	<!--stylesheets-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 {% include 'layouts/_nav.html' %}
-<div class="com">
-{% block content %}{% endblock %}
-</div>
+{% block content %}
+{% endblock %}
+{% include 'layouts/_footer.html' %}
 </body>
 </html>

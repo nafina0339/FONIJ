@@ -40,3 +40,5 @@ def register(request):
 	else:
 		form1 = userform()
 	return render(request, 'pages/register.html', {'frm':form1})
+def base(request):
+	return render(request, 'layouts/base.html')
